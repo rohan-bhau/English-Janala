@@ -9,6 +9,16 @@ const displayLevelWord = (words) => {
   const wordContainer = document.getElementById("word-container");
   wordContainer.innerHTML = "";
 
+if(words.length == 0){
+    wordContainer.innerHTML=`
+          <div class="text-center col-span-full py-5 space-y-3">
+          <img class="mx-auto" src="./assets/alert-error.png" />
+        <p class="font-bangla text-neutral/60 text-sm">এই Lesson এ এখনো কোন Vocabulary যুক্ত করা হয়নি। </p>
+        <h2 class="font-bangla text-3xl font-[500]">নেক্সট Lesson এ যান</h2>
+      </div>`
+      return
+}
+
   words.forEach((word) => {
     const card = document.createElement("div");
     card.innerHTML = `

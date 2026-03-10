@@ -11,8 +11,7 @@ const displayLessons = (lessons) => {
   console.log(lessons);
   //? 1- get the container
   const levelContainer = document.getElementById("level-container");
-//   levelContainer.innerHTML = "";
-
+  levelContainer.innerHTML = "";
   //? 2- get the separated lessons
   lessons.forEach((lesson) => {
     console.log(lesson);

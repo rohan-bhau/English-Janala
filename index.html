@@ -39,7 +39,9 @@
   <body>
     <!-- ! navbar  -->
     <header>
-      <div class="navbar bg-[#BADEFF]/26 shadow-sm justify-between px-10 md:px-15 lg:px-20 py-4">
+      <div
+        class="navbar bg-[#BADEFF]/26 shadow-sm justify-between px-10 md:px-15 lg:px-20 py-4"
+      >
         <div class="navbar-start">
           <div class="">
             <a class="flex items-center gap-1"
@@ -108,35 +110,66 @@
     </header>
 
     <!-- ! banner section -->
-     <section class="flex flex-col-reverse  md:flex-row justify-between items-center px-10 lg:px-20 md:px-15  pt-12">
-        <div class="content text-center md:text-left">
-            <h1 class="text-4xl md:text-6xl font-bold mb-6"><span class="text-sky-400">English </span><span>is Easy!!</span></h1>
-            <p class="font-bangla text-xl mb-7">আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা <br> আপনার দক্ষতা বাড়াতে চান, আমাদের <span>Interactive Lessons</span> আপনাকে নিয়ে <br> যাবে অন্য একটি <span>Level</span> এ</p>
+    <section
+      class="flex flex-col-reverse md:flex-row justify-between items-center px-10 lg:px-20 md:px-15 pt-12"
+    >
+      <div class="content text-center md:text-left">
+        <h1 class="text-4xl md:text-6xl font-bold mb-6">
+          <span class="text-sky-400">English </span><span>is Easy!!</span>
+        </h1>
+        <p class="font-bangla text-xl mb-7">
+          আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা
+          <br />
+          আপনার দক্ষতা বাড়াতে চান, আমাদের
+          <span>Interactive Lessons</span> আপনাকে নিয়ে <br />
+          যাবে অন্য একটি <span>Level</span> এ
+        </p>
 
-            <input class="border-neutral/30 p-3 w-80 rounded-md" type="text" placeholder="Enter Your Name"> <br> <br>
-            <input class="border-neutral/30 p-3 w-80 rounded-md" type="password" name="" id="" placeholder="Enter Your Password"> <br><br>
-            <button class="btn btn-primary">Get Started</button>
-        </div>
-        <div class="justify-end">
-            <img src="./assets/hero-student.png" alt="">
-        </div>
-     </section>
+        <input
+          class="border-neutral/30 p-3 w-80 rounded-md"
+          type="text"
+          placeholder="Enter Your Name"
+        />
+        <br />
+        <br />
+        <input
+          class="border-neutral/30 p-3 w-80 rounded-md"
+          type="password"
+          name=""
+          id=""
+          placeholder="Enter Your Password"
+        />
+        <br /><br />
+        <button class="btn btn-primary">Get Started</button>
+      </div>
+      <div class="justify-end">
+        <img src="./assets/hero-student.png" alt="" />
+      </div>
+    </section>
 
+    <!-- ! let's learn vocabulary section -->
+    <section>
+      <h1 class="mb-10 font-bold text-4xl text-center">
+        <span class="text-sky-400">Let's</span> Learn Vocabularies
+      </h1>
 
-     <!-- ! let's learn vocabulary section -->
-      <section>
-        <h1 class="mb-10 font-bold text-4xl text-center"><span class="text-sky-400 ">Let's</span> Learn Vocabularies</h1>
+      <div
+        id="level-container"
+        class="flex flex-wrap justify-center gap-5"
+      ></div>
+    </section>
 
-        <div id="level-container" class="flex flex-wrap justify-center gap-5"></div>
-      </section>
+    <section
+      id="word-container"
+      class="bg-gray-100 p-10 w-11/12 mx-auto my-10 rounded-md grid grid-cols-3 gap-5"
+    >
+      <div class="text-center col-span-full py-5 space-y-3">
+        <p class="font-bangla text-neutral/60 text-sm">আপনি এখনো কোন Lesson Select করেন নি </p>
+        <h2 class="font-bangla text-3xl font-[500]">একটি Lesson Select করুন।</h2>
+      </div>
+    </section>
 
-
-      <section id="word-container" class="bg-gray-100 p-10 w-11/12 mx-auto my-10 rounded-md grid grid-cols-3 gap-5">
-
-
-      </section>
-
-      <script src="./script/lessons.js"></script>
-      <script src="./script/loadDatas.js"></script>
+    <script src="./script/lessons.js"></script>
+    <script src="./script/loadDatas.js"></script>
   </body>
 </html>
