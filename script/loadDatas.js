@@ -1,4 +1,5 @@
 const loadLevelWord = (id) => {
+    loadingSpinner(true)
   const url = `https://openapi.programming-hero.com/api/level/${id}`;
   fetch(url)
     .then((res) => res.json())
@@ -22,6 +23,7 @@ const displayLevelWord = (words) => {
         <p class="font-bangla text-neutral/60 text-sm">এই Lesson এ এখনো কোন Vocabulary যুক্ত করা হয়নি। </p>
         <h2 class="font-bangla text-3xl font-[500]">নেক্সট Lesson এ যান</h2>
       </div>`;
+      loadingSpinner(false)
     return;
   }
 
@@ -42,4 +44,5 @@ const displayLevelWord = (words) => {
 
     wordContainer.appendChild(card);
   });
+  loadingSpinner(false)
 };
