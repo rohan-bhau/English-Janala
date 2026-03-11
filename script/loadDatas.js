@@ -1,5 +1,5 @@
 const loadLevelWord = (id) => {
-    loadingSpinner(true)
+  loadingSpinner(true);
   const url = `https://openapi.programming-hero.com/api/level/${id}`;
   fetch(url)
     .then((res) => res.json())
@@ -23,7 +23,7 @@ const displayLevelWord = (words) => {
         <p class="font-bangla text-neutral/60 text-sm">এই Lesson এ এখনো কোন Vocabulary যুক্ত করা হয়নি। </p>
         <h2 class="font-bangla text-3xl font-[500]">নেক্সট Lesson এ যান</h2>
       </div>`;
-      loadingSpinner(false)
+    loadingSpinner(false);
     return;
   }
 
@@ -36,7 +36,7 @@ const displayLevelWord = (words) => {
 <p class="font-bangla text-2xl font-bold">"${word.meaning ? word.meaning : "অর্থ পাওয়া যায়নি "} / ${word.pronunciation ? word.pronunciation : "pronunciation পাওয়া যায়নি "} "</p>
 <div class="flex justify-between items-center content-center">
 <button onclick="loadWordDetail(${word.id})" class="btn btn-soft btn-info"><i class="fa-solid fa-circle-info" style="color: #374957;"></i></button>
-<button class="btn btn-soft btn-info"><i class="fa-solid fa-volume-high" style="color: #374957;"></i></i></button>
+<button onclick="pronounceWord('${word.word}')" class="btn btn-soft btn-info"><i class="fa-solid fa-volume-high" style="color: #374957;"></i></i></button>
 </div>
 
 </div>
@@ -44,5 +44,5 @@ const displayLevelWord = (words) => {
 
     wordContainer.appendChild(card);
   });
-  loadingSpinner(false)
+  loadingSpinner(false);
 };
